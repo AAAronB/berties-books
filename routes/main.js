@@ -40,6 +40,21 @@ module.exports = function(app, shopData) {
             res.render('list.ejs', newData);
          });
     });
+    app.get('/addbook', function (req,res){
+        res.render('addbook.ejs',shopData);
+    });
+    app.post('/bookadded', function (req,res){
+        let addquery = "INSERT INTO books (name,price) VALUES" + "('" + req.body.book_name +"',"+req.body.price+");";
+           db.query(addquery, (err, result) => {
+             if (err) {
+               return console.error(err.message);
+             }
+             else {
+                res.send('Your book ' +'"' + req.body.book_name + '"' + ' for £' +req.body.price + ' has been added to our list.');
+             }
+           });
+
+    });
 
 
  
