@@ -8,6 +8,7 @@ var mysql = require('mysql');
 const app = express()
 const port = 8000
 app.use(bodyParser.urlencoded({ extended: true }))
+
 // Define the database connection
 const db = mysql.createConnection ({
     host: 'localhost',
@@ -15,6 +16,7 @@ const db = mysql.createConnection ({
     password: 'app2027',
     database: 'myBookshop'
 });
+
 // Connect to the database
 db.connect((err) => {
     if (err) {
