@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+  <head>
+    <title>List of books <%=shopName%></title>
+    <link rel="stylesheet"  type="text/css" href="/main.css" />
+  </head>
+  <body>
+    <h1>List of books sold at <%=shopName%></h1>
+    <p>Here are books that we sell:</p>
+    <% availableBooks.forEach(book => { %>
+      <li><%=book.name%>, £<%=book.price%></li> <!--Uses the object avaliable books and loops through the array outputting the book name and the book price.-->
+    <% }); %>
+  </body>
+</html>

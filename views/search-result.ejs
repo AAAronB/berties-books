@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Search result </title>
+    <link rel="stylesheet"  type="text/css" href="/main.css" />
+  </head>
+  <body>
+    <h1>You Searched for:</h1>
+    <% availableBooks.forEach(book => { %>
+        <li><%=book.name%>, £<%=book.price%></li>
+    <% }); %>
+    <!--Uses the object avaliable books and loops through the array outputting the book name and the book price.-->
+  </body>
+</html>

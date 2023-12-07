@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Add to <%=shopName%></title>
+    <link rel="stylesheet"  type="text/css" href="/main.css" />
+  </head>
+  <body>
+    <h1>Add a book to <%=shopName%></h1>
+    <form action="/bookadded" method="POST">
+      <p>Add a book to <%=shopName%></p>
+      <p><input id="name" type="text" name="name" value="Enter a book"></p>
+      <p><input id="price" type="double" name="price" value="Enter the price of the book"></p>
+      <p><input type="submit" value="Add" ></p>
+             <!--We have forms which prompt the user to input the name and price of the book they wish to add. The app saves what is inputted and outputs the results by referencing the keyword
+      as req.body.name and req.body.price .-->
+    </form>
+  </body>
+</html>
