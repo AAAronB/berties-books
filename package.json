@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "author": "",
   "license": "ISC",
@@ -12,7 +14,8 @@
     "ejs": "^3.1.6",
     "express": "^4.18.1",
     "mysql": "^2.18.1",
-    "pug": "^3.0.2"
+    "pug": "^3.0.2",
+    "storybook": "^8.1.6"
   },
   "repository": {
     "type": "git",
@@ -22,5 +25,18 @@
     "url": "https://github.com/lewfer/gs-dwa-lab-3.1/issues"
   },
   "homepage": "https://github.com/lewfer/gs-dwa-lab-3.1#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "@chromatic-com/storybook": "^1.5.0",
+    "@storybook/addon-essentials": "^8.1.7",
+    "@storybook/addon-interactions": "^8.1.7",
+    "@storybook/addon-links": "^8.1.7",
+    "@storybook/addon-onboarding": "^8.1.7",
+    "@storybook/addon-webpack5-compiler-swc": "^1.0.3",
+    "@storybook/blocks": "^8.1.7",
+    "@storybook/react": "^8.1.7",
+    "@storybook/react-webpack5": "^8.1.7",
+    "@storybook/test": "^8.1.7",
+    "prop-types": "^15.8.1"
+  }
 }
